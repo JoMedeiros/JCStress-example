@@ -41,11 +41,11 @@
 </tr>
 <tr>
 <td nowrap>java.vendor</td>
-<td nowrap>Oracle Corporation</td>
+<td nowrap>Ubuntu</td>
 </tr>
 <tr>
 <td nowrap>java.version</td>
-<td nowrap>11.0.3</td>
+<td nowrap>11.0.4</td>
 </tr>
 <tr>
 <td nowrap>java.vm.name</td>
@@ -53,11 +53,11 @@
 </tr>
 <tr>
 <td nowrap>java.vm.vendor</td>
-<td nowrap>Oracle Corporation</td>
+<td nowrap>Ubuntu</td>
 </tr>
 <tr>
 <td nowrap>java.vm.version</td>
-<td nowrap>11.0.3+7-Ubuntu-1ubuntu218.04.1</td>
+<td nowrap>11.0.4+11-post-Ubuntu-1ubuntu218.04.3</td>
 </tr>
 <tr>
 <td nowrap>os.arch</td>
@@ -69,52 +69,52 @@
 </tr>
 <tr>
 <td nowrap>os.version</td>
-<td nowrap>4.15.0-50-generic</td>
+<td nowrap>4.15.0-60-generic</td>
 </tr>
 </table>
 <h3>Test configurations</h3>
 <table>
 <tr>
 <td nowrap><b>TC 1</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8]
 Iterations: 5
 Time: 1000
 Stride: [10, 10000] (capped by NONE)</td>
 </tr>
 <tr>
 <td nowrap><b>TC 2</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
 Iterations: 5
 Time: 1000
 Stride: [10, 10000] (capped by NONE)</td>
 </tr>
 <tr>
 <td nowrap><b>TC 3</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:-TieredCompilation]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:-TieredCompilation]
 Iterations: 5
 Time: 1000
 Stride: [10, 10000] (capped by NONE)</td>
 </tr>
 <tr>
 <td nowrap><b>TC 4</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:-TieredCompilation, -XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:-TieredCompilation, -XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
 Iterations: 5
 Time: 1000
 Stride: [10, 10000] (capped by NONE)</td>
 </tr>
 <tr>
 <td nowrap><b>TC 5</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:TieredStopAtLevel=1]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -XX:TieredStopAtLevel=1]
 Iterations: 5
 Time: 1000
 Stride: [10, 10000] (capped by NONE)</td>
 </tr>
 <tr>
 <td nowrap><b>TC 6</b></td>
-<td nowrap>JVM options: [-javaagent:/home/work/Downloads/idea-IC-192.5728.98/lib/idea_rt.jar=34089:/home/work/Downloads/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -Xint]
+<td nowrap>JVM options: [-javaagent:/home/work/idea-IC-192.5728.98/lib/idea_rt.jar=33857:/home/work/idea-IC-192.5728.98/bin, -Dfile.encoding=UTF-8, -Xint]
 Iterations: 5
 Time: 1000
-Stride: [10, 10000] (capped by NONE)</td>
+Stride: [10, 1024] (capped by TIME)</td>
 </tr>
 </table>
 <h3>Observed states</h3>
@@ -131,26 +131,37 @@ Stride: [10, 10000] (capped by NONE)</td>
 <th>Interpretation</th>
 </tr>
 <tr>
-<td align='center'>0, 1</td>
-<td align='right' width='5.0%' bgColor=#00ff00>5370707</td>
-<td align='right' width='5.0%' bgColor=#00ff00>7130129</td>
-<td align='right' width='5.0%' bgColor=#00ff00>9339246</td>
-<td align='right' width='5.0%' bgColor=#00ff00>5466511</td>
-<td align='right' width='5.0%' bgColor=#00ff00>5890423</td>
-<td align='right' width='5.0%' bgColor=#00ff00>774581</td>
+<td align='center'>1, 2</td>
+<td align='right' width='5.0%' bgColor=#00ff00>641544</td>
+<td align='right' width='5.0%' bgColor=#00ff00>690678</td>
+<td align='right' width='5.0%' bgColor=#00ff00>590612</td>
+<td align='right' width='5.0%' bgColor=#00ff00>469110</td>
+<td align='right' width='5.0%' bgColor=#00ff00>565030</td>
+<td align='right' width='5.0%' bgColor=#00ff00>28259</td>
 <td>ACCEPTABLE</td>
-<td>get back 0-1</td>
+<td>get back 1-2</td>
 </tr>
 <tr>
-<td align='center'>1, 0</td>
-<td align='right' width='5.0%' bgColor=#00ff00>3926214</td>
-<td align='right' width='5.0%' bgColor=#00ff00>3867292</td>
-<td align='right' width='5.0%' bgColor=#00ff00>4107545</td>
-<td align='right' width='5.0%' bgColor=#00ff00>3299570</td>
-<td align='right' width='5.0%' bgColor=#00ff00>3463178</td>
-<td align='right' width='5.0%' bgColor=#00ff00>426810</td>
+<td align='center'>2, 1</td>
+<td align='right' width='5.0%' bgColor=#00ff00>170722</td>
+<td align='right' width='5.0%' bgColor=#00ff00>96107</td>
+<td align='right' width='5.0%' bgColor=#00ff00>91652</td>
+<td align='right' width='5.0%' bgColor=#00ff00>132239</td>
+<td align='right' width='5.0%' bgColor=#00ff00>207754</td>
+<td align='right' width='5.0%' bgColor=#00ff00>8931</td>
 <td>ACCEPTABLE</td>
-<td>get back 1-0</td>
+<td>get back 2-1</td>
+</tr>
+<tr>
+<td align='center'>2, 2</td>
+<td align='right' width='5.0%' bgColor=#00ff00>105955</td>
+<td align='right' width='5.0%' bgColor=#00ff00>26936</td>
+<td align='right' width='5.0%' bgColor=#00ff00>73387</td>
+<td align='right' width='5.0%' bgColor=#00ff00>190032</td>
+<td align='right' width='5.0%' bgColor=#00ff00>175127</td>
+<td align='right' width='5.0%' bgColor=#00ff00>1799</td>
+<td>ACCEPTABLE</td>
+<td>get back 2-2</td>
 </tr>
 <tr>
 <td></td>
